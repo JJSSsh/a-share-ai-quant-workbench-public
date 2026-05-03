@@ -1,0 +1,5 @@
+trade_date,signal_time,symbol,name,strategy_id,signal_source,trigger_reason,market_temperature,risk_tag,score,status
+2026-05-01,14:45,000001.SZ,MockBank,tail_watch_v1,mock_data,volume_breakout,neutral,none,72.5,watch
+2026-05-01,14:45,600000.SH,MockFinance,tail_watch_v1,mock_data,late_strength,warm,high_open_gap,65.0,watch
+2026-05-01,14:50,300001.SZ,MockTech,theme_mapper_v1,mock_news,news_theme_mapping,hot,high_volatility,68.5,review
+

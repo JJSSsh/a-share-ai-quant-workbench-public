@@ -1,0 +1,5 @@
+trade_date,symbol,name,strategy_id,watch_start_time,entry_condition,entry_triggered,watch_status,exit_reason,review_note
+2026-05-01,000001.SZ,MockBank,tail_watch_v1,14:45,hold_above_vwap,1,closed,time_exit,followed expected path in mock sample
+2026-05-01,600000.SH,MockFinance,tail_watch_v1,14:45,break_previous_high,0,expired,no_trigger,signal weakened before close
+2026-05-01,300001.SZ,MockTech,theme_mapper_v1,14:50,confirm_news_strength,0,review,needs_manual_review,theme needs better mapping
+
