@@ -2,7 +2,7 @@
 
 当前公开截图：
 
-![公开版工作台截图：真实数据、账户与私有策略已脱敏](screenshots/dashboard_overview_redacted.png)
+![公开版工作台截图：真实数据、账户与私有策略已脱敏](redacted_dashboard_screenshot.png)
 
 截图用于展示工作台形态，已经遮挡真实账户、持仓、收益细节、数据量和私有策略指标。
 

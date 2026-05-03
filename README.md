@@ -1,42 +1,82 @@
 # A-Share AI Quant Workbench Public
 
-一个面向 A 股盘中研究的 AI 量化工作台名片仓库。
+> 一个面向 A 股盘中研究的 AI 量化工作台名片仓库。  
+> 不荐股，不带单，不公开私有策略，仅用于研究交流和共研者筛选。
 
-这个仓库不是完整交易系统，也不是荐股项目。它用于公开展示研究方向、系统边界和协作方式，帮助找到少数能一起研究策略工程、数据治理、回测验证和复盘归因的人。
+This is not a full trading system, not a stock recommendation project, and not an automated money-making tool.
 
-![公开版工作台截图：真实数据、账户与私有策略已脱敏](examples/screenshots/dashboard_overview_redacted.png)
+The purpose of this repository is to publicly describe the research direction, system boundary, collaboration style, and a small set of redacted examples.
 
-## 我们在研究什么
+## Redacted Dashboard Preview
 
-- A 股盘中信号监测，重点关注 14:45 附近的候选信号。
-- 策略信号、观察池、持仓观察和复盘记录的结构化落库。
-- AI 辅助新闻归因、复盘总结、策略失败分析和研究笔记整理。
-- 用 Python、pandas、SQL、DuckDB、SQLite、Streamlit 等工具搭建本地研究闭环。
-- 让策略从想法、样本、回测、观察、复盘逐步走向可验证。
+![Redacted dashboard preview](examples/redacted_dashboard_screenshot.png)
 
-## 公开什么
+The screenshot is redacted. Real data, account information, trading records, private strategy parameters, and executable trading logic are not included.
 
-- 系统架构和研究原则。
-- 脱敏后的表结构草案。
-- mock 数据样例。
-- 复盘、归因、策略 postmortem 的提示词模板。
-- 公开版路线图。
+## Research Workflow
 
-## 不公开什么
+```mermaid
+flowchart LR
+    A[Historical Data] --> B[Data Quality Checks]
+    B --> C[Strategy Research]
+    C --> D[14:45 Live Signal Scan]
+    D --> E[Signal Pool]
+    E --> F[Watch Positions]
+    F --> G[Post-trade Review]
+    G --> C
 
-- 真实行情数据库。
-- 实盘账户、持仓、交易记录。
-- 私有策略参数和完整信号逻辑。
-- 第三方数据源 token、券商环境配置、MiniQMT 私有配置。
-- 未脱敏的回测明细和真实股票池。
+    N[News / Announcements] --> H[AI-assisted Attribution]
+    H --> E
+```
 
-## 适合谁
+## Current Status
 
-如果你会写代码、做数据、懂一点交易机制，愿意用样本和复盘验证策略假设，欢迎看 [协作说明](docs/collaboration.md)。
+- Local historical data layer is already in use.
+- Intraday QMT / MiniQMT data integration is being tested in the live-market workflow.
+- 14:45 signal scanning is the current core research window.
+- Signal pool and watch-position structures are being separated.
+- Shadow candidates are used for observation only, not for live execution.
+- The system is being improved to explain no-signal days: market veto, strict rules, non-buyable limit-up candidates, stale data, or unavailable real-time quotes.
 
-如果你想找现成股票代码、跟单、带单、稳赚方法或零基础培训，这个仓库不适合。
+## Public Example Strategy
 
-## 目录
+The public example is a **14:45 tail-session signal scan**.
+
+It does not expose private thresholds or execution rules. The idea is only described at the workflow level:
+
+- Scan the late-session market environment around 14:45.
+- Filter candidates into a signal pool instead of treating every candidate as tradable.
+- Move selected candidates into watch positions for observation.
+- Use post-trade review to classify misses, false positives, market vetoes, and stale-data cases.
+- Let AI assist with attribution and review notes, not final trading decisions.
+
+This example is shared to explain the research workflow, not to provide stock picks or trading signals.
+
+## What Is Public
+
+- System architecture and research principles.
+- Redacted schema drafts.
+- Mock data examples.
+- Prompt templates for review, attribution, and strategy postmortems.
+- A public roadmap for the card repository.
+
+## What Is Not Public
+
+- Real market databases.
+- Real account, position, and trading records.
+- Private strategy parameters and complete signal logic.
+- Third-party data-source tokens, broker environment files, and MiniQMT private configuration.
+- Non-redacted backtest details or real stock pools.
+
+## Who This Is For
+
+This repository is for people who can write code, work with data, understand some market mechanics, and are willing to validate strategy hypotheses with samples and reviews.
+
+See [Collaboration](docs/collaboration.md) before reaching out.
+
+This repository is not for stock tips, copy trading, paid calls, guaranteed returns, or zero-foundation training.
+
+## Repository Layout
 
 ```text
 .
@@ -49,6 +89,7 @@
 │   ├── signal_pool_daily_schema.sql
 │   └── watch_positions_schema.sql
 ├── examples/
+│   ├── redacted_dashboard_screenshot.png
 │   ├── mock_signal_pool.csv
 │   ├── mock_watch_positions.csv
 │   └── mock_ui_screenshot.md
@@ -56,11 +97,17 @@
 │   ├── news_to_stock_mapping.md
 │   ├── daily_review_template.md
 │   └── strategy_postmortem_template.md
+├── DISCLAIMER.md
 ├── .env.example
 ├── .gitignore
 └── LICENSE
 ```
 
-## 当前状态
+## License and Usage
 
-这是一个公开名片仓库。目标不是马上交付完整可运行产品，而是先把研究方向、边界和协作入口讲清楚。
+This public repository is released for research communication only.
+
+The private trading system, strategy parameters, real data, and execution logic are not part of this repository.
+
+MIT can cover the public files in this repository, but do not assume that any private strategy, database, account workflow, or execution logic is open sourced.
+
