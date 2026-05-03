@@ -4,12 +4,19 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
 
 # Environments
 .venv/
 .venv*/
 venv/
+env/
 .env
+.envrc
 
 # Private data
 data/
@@ -29,6 +36,6 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Logs
+# Logs and secrets
 *.log
-
+.streamlit/secrets.toml
