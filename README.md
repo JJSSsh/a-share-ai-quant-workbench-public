@@ -3,6 +3,8 @@
 > 一个面向 A 股盘中研究的 AI 量化工作台名片仓库。<br>
 > 不荐股，不带单，不公开私有策略，仅用于研究交流和共研者筛选。
 
+当前版本：`v0.1.0-public-card`
+
 这个仓库不是完整交易系统，不是荐股项目，也不是自动赚钱工具。
 
 它的目的很简单：公开说明我的研究方向、系统边界、协作方式，以及少量已经脱敏的示例，让真正对 A 股量化研究、数据工程、盘中监测和 AI 辅助复盘感兴趣的人能快速判断是否同频。
@@ -78,10 +80,26 @@ flowchart LR
 
 如果你想找现成股票代码、跟单、带单、稳赚方法或零基础培训，这个仓库不适合。
 
+## 联系与共研
+
+如果你看完这个仓库后仍然觉得方向同频，可以通过下面的微信二维码联系。
+
+<img src="assets/wechat-research-contact-qr.jpg" alt="微信共研联系二维码" width="260">
+
+添加前建议先准备这几个问题的答案：
+
+- 你现在主要研究 A 股的哪类策略？
+- 你会哪些工具？Python / SQL / pandas / DuckDB / QMT / Streamlit 都可以。
+- 你过去有没有做过回测、复盘或实盘观察？
+- 你更想贡献哪一块：代码、数据、复盘、策略假设、新闻归因、盘口观察？
+- 你能接受不荐股、不带单、不公开私有策略，只做验证共研吗？
+
 ## 目录
 
 ```text
 .
+├── assets/
+│   └── wechat-research-contact-qr.jpg
 ├── docs/
 │   ├── architecture.md
 │   ├── research-principles.md
@@ -100,6 +118,8 @@ flowchart LR
 │   ├── daily_review_template.md
 │   └── strategy_postmortem_template.md
 ├── DISCLAIMER.md
+├── CHANGELOG.md
+├── VERSION
 ├── .env.example
 ├── .gitignore
 └── LICENSE
