@@ -39,3 +39,6 @@ Thumbs.db
 # Logs and secrets
 *.log
 .streamlit/secrets.toml
+
+# Local screenshot originals
+examples/screenshots/*raw*.png

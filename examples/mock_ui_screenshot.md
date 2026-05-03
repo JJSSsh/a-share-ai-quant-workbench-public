@@ -1,6 +1,12 @@
-# Mock UI Screenshot Placeholder
+# Public UI Screenshot
 
-正式公开前可以放一张打码截图或 mock 截图，展示：
+当前公开截图：
+
+![公开版工作台截图：真实数据、账户与私有策略已脱敏](screenshots/dashboard_overview_redacted.png)
+
+截图用于展示工作台形态，已经遮挡真实账户、持仓、收益细节、数据量和私有策略指标。
+
+后续可以继续补充：
 
 - 策略卡片。
 - 14:45 信号池。
@@ -8,4 +14,3 @@
 - 盘后复盘摘要。
 
 不要展示真实账户、持仓、交易记录、完整股票池或私有策略参数。
-
