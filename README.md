@@ -23,7 +23,9 @@ English note: this is a public profile repository for research communication onl
 flowchart LR
     A[历史数据] --> B[数据质量检查]
     B --> C[策略研究]
-    C --> D[14:45 盘中信号扫描]
+    R[盘中实时数据接入] --> Q[实时数据刷新 / 校验]
+    Q --> D[14:45 盘中信号扫描]
+    C --> D
     D --> E[信号池]
     E --> F[观察池 / 持仓观察]
     F --> G[盘后复盘]
@@ -37,6 +39,7 @@ flowchart LR
 
 - 本地历史数据层已经在使用中。
 - QMT / MiniQMT 盘中数据接入正在实盘流程里测试。
+- 盘中实时数据接入、刷新和可用性校验是当前重点整合方向。
 - 14:45 信号扫描是当前核心研究窗口。
 - 信号池和观察池 / 持仓观察结构正在拆分。
 - 影子候选只用于观察，不直接进入实盘执行。
