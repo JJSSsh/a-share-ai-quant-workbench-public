@@ -9,4 +9,3 @@ All examples are mock or redacted. Real trading data, private strategy parameter
 Anyone using ideas from this repository is responsible for their own research, risk control, and trading decisions.
 
 Nothing in this repository should be interpreted as financial advice or an invitation to trade any security.
-

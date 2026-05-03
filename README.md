@@ -1,6 +1,6 @@
 # A-Share AI Quant Workbench Public
 
-> 一个面向 A 股盘中研究的 AI 量化工作台名片仓库。  
+> 一个面向 A 股盘中研究的 AI 量化工作台名片仓库。<br>
 > 不荐股，不带单，不公开私有策略，仅用于研究交流和共研者筛选。
 
 This is not a full trading system, not a stock recommendation project, and not an automated money-making tool.
@@ -110,4 +110,3 @@ This public repository is released for research communication only.
 The private trading system, strategy parameters, real data, and execution logic are not part of this repository.
 
 MIT can cover the public files in this repository, but do not assume that any private strategy, database, account workflow, or execution logic is open sourced.
-
